@@ -4,20 +4,25 @@
 body {
     margin: 0;
     padding: 0;
-    background: linear-gradient(150deg, #1454B9, #2979FF);
+    background: linear-gradient( #1454B9, #2979FF);
+    background-repeat: no-repeat;
     font-family: sans-serif;
+    display: grid;
+    place-content: center;
+    height: 100vh;
 }
 .container {
     background-color: white;
     width: 400px;
     height: 650px;
     box-shadow: 0 10px 50px rgba(0, 0, 0, 0.5);
-    margin-left: 550px;
-    margin-top: 50px;
+    border-radius: 8px;
+    margin-top: 30px;
 }
 .header {
     background: linear-gradient(to right, #0D47A2, #1B68E0);
     padding: 20px;
+    border-radius: 8px 8px 0 0;
 }
 .first-content {
     margin-top: 8px;
@@ -30,7 +35,9 @@ body {
 }
 .back-icon {
     width: 10px;
+    cursor: pointer;
 }
+
 .search {
     padding: 15px 180px 15px 15px;
     margin-top: 20px;
@@ -43,10 +50,17 @@ body {
     color: rgb(216, 216, 216);
 }
 .profile-pic {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
-    justify-content: space-around;
+    padding-left:  20px;
+    padding-right: 20px;
     margin-top: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.profile-pic:hover {
+    background-color: rgba(109, 109, 109, 0.1);
 }
 .profile-img {
     width:  75px;
@@ -54,11 +68,18 @@ body {
     object-fit: cover;
     border-radius: 50px;
     border: 4px solid #A8C5F2;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+.profile-img:hover {
+    box-shadow: 0 8px 15px #1573ff;
+    border: 4px solid #1573ff;
+    transform: scale(1.1);
 }
 .name {
     color: #2A5FAF;
     font-weight: 600;
-    margin-left: -45px;
+    margin-left: -30px;
 }
 .follow {
     background: linear-gradient(to right, #0D49A4, #1573ff);
@@ -68,6 +89,12 @@ body {
     border-radius: 50px;
     padding: 10px 20px;
     box-shadow: 0 5px 8px #65a8ff;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.follow:hover {
+    box-shadow: 0 8px 15px #1573ff;
+    transform: scale(1.1);
 }
 .unfollow {
     background-color: transparent;
@@ -76,6 +103,12 @@ body {
     padding: 10px 20px;
     color: #165ecb;
     border: 1px solid #165ecb;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.unfollow:hover {
+    transform: scale(1.1);
+
 }
 .profile-container {
     margin-top: 30px;
